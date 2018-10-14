@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<title>Armbrae Academy Sentence Generator</title>
+	<script>
+	var oneArray = new Array("Formal", "Inversion", "Intonation");
+	var twoArray = new Array("Negative", "Affirmative");
+	var threeArray = new Array("Présent", "Futur proche");
+	var fourArray = new Array("Who", "What", "When", "Where", "Why", "How", "How much/many", "***");
+	var fiveArray = new Array("1st pers. sing.", "2nd pers. sing.", "3rd pers. sing. M.", "3rd pers. sing. F.", "1st pers. plur.", "2nd pers. plur.", "3rd pers. plur. M.", "3rd pers. plur. F.", "Christopher", "Anne", "Greg et Neil", "Amber et Anissa", "Kate et Will");
+	var sixArray = new Array("lancer", "jouer", "voyager", "embrasser", "habiter", "chuchoter", "danser", "manger", "regarder", "mourir", "tomber", "chanter", "ouvrir", "envoyer", "devoir", "employer", "s'enticher", "choisir", "pleurer", "sauter", "aimer", "louer", "donner", "acheter", "vendre");
+	var sevenArray = new Array("un petit cochon", "un éléphant gris", "le pingouin", "un garçon", "un singe", "Sam", "un stylo", "le livre", "le chien", "le poisson", "50 roses", "le Titanic", "un panneau", "la télé", "la guitare", "un enfant", "la brebis", "l'ours", "un papier", "la classe", "le chat", "le roi", "Halifax", "le fromage", "une fille", "la musique de Abba", "le lion", "la chambre", "ma maison", "l'âne");
+
+	function generate() {
+		document.getElementById('oneDiv').innerHTML = oneArray[Math.floor(Math.random() * oneArray.length)];
+		document.getElementById('twoDiv').innerHTML = twoArray[Math.floor(Math.random() * twoArray.length)];
+		document.getElementById('threeDiv').innerHTML = threeArray[Math.floor(Math.random() * threeArray.length)];
+		document.getElementById('fourDiv').innerHTML = fourArray[Math.floor(Math.random() * fourArray.length)];
+		document.getElementById('fiveDiv').innerHTML = fiveArray[Math.floor(Math.random() * fiveArray.length)];
+		document.getElementById('sixDiv').innerHTML = sixArray[Math.floor(Math.random() * sixArray.length)];
+		document.getElementById('sevenDiv').innerHTML = sevenArray[Math.floor(Math.random() * sevenArray.length)];
+	}
+	
+	window.onload = generate;
+	</script>
+</head>
+<body>
+	<h1>Armbrae Academy Sentence Generator</h1>
+	<table>
+		<thead><tr>
+			<td>Sentence Type</td>
+			<td>Pos/Neg</td>
+			<td>Tense</td>
+			<td>Question Word</td>
+			<td>Subject</td>
+			<td>Verb</td>
+			<td>Object</td>
+		</tr></thead>
+		<tr class="alt">
+			<td><div id='oneDiv'></div></td>
+			<td><div id='twoDiv'></div></td>
+			<td><div id='threeDiv'></div></td>
+			<td><div id='fourDiv'></div></td>
+			<td><div id='fiveDiv'></div></td>
+			<td><div id='sixDiv'></div></td>
+			<td><div id='sevenDiv'></div></td>
+		</tr>
+	</table>
+	<p><input type='submit' value='Generate' onclick='generate()' /></p>
+	
+
+
+</body>
+</html>
